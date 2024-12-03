@@ -103,7 +103,7 @@ function isNoteExpired(note) {
   const currentDateTime = getLocalTime();
   const noteDateTime = `${note.date} ${note.time}`;
 
-  return currentDateTime > noteDateTime;
+  return currentDateTime >= noteDateTime;
 }
 
 function removeExpiredNotes() {
