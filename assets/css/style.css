@@ -1,0 +1,67 @@
+@font-face {
+  font-family: custom;
+  src: url("../fonts/Dancing_Script/static/DancingScript-Bold.ttf");
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background-image: url(../images/tile.jpg);
+}
+
+header {
+  font-family: custom;
+  font-size: 40px;
+  text-align: center;
+}
+
+main {
+  background-image: url(../images/formbg.jpg);
+  width: 50%;
+  margin: auto;
+}
+
+form {
+  padding: 10px;
+}
+
+#notes {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+.note:last-child {
+  animation: fadeIn 1s ease-in-out;
+}
+
+.note {
+  padding: 20px;
+  width: 200px;
+  height: 250px;
+  background-image: url(../images/notebg.png);
+}
+.note > :nth-child(2) {
+  height: 160px;
+  overflow: scroll;
+}
+
+i {
+  display: none;
+}
+
+.note:hover > i {
+  display: flex;
+  flex-direction: row-reverse;
+  margin-right: 5px;
+  cursor: pointer;
+}
